@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Página não encontrada — Ranieri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f;
+      --bg-soft: #12121a;
+      --text: #e4e4e7;
+      --text-muted: #a1a1aa;
+      --accent: #6366f1;
+      --accent-hover: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.4);
+      --font-sans: 'Outfit', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    html { height: 100%; }
+    body {
+      min-height: 100%;
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+    .glow {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width:  min(80vw, 500px);
+      height: min(80vw, 500px);
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.05); }
+    }
+    .content { position: relative; z-index: 1; }
+    .code {
+      font-family: var(--font-mono);
+      font-size: clamp(5rem, 20vw, 10rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--text) 0%, var(--text-muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+    .title {
+      font-size: clamp(1.25rem, 4vw, 1.5rem);
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+    .message {
+      max-width: 420px;
+      margin: 1.5rem auto 0;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin: 2rem auto;
+      border-radius: 2px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: transparent;
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+    .hero-404 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(1.5rem, 5vw, 3rem);
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+    .gill-wrap {
+      flex-shrink: 0;
+    }
+    .gill {
+      width: clamp(110px, 26vw, 180px);
+      height: auto;
+      animation: gill-float 3s ease-in-out infinite;
+    }
+    .gill .gill-eye { animation: gill-blink 5s ease-in-out infinite; }
+    @keyframes gill-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes gill-blink {
+      0%, 40%, 60%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(0.08); }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="content">
+    <div class="hero-404">
+      <div class="gill-wrap" aria-hidden="true">
+        <!-- Gill (Dragon Ball GT) - um olho vermelho, corpo branco/azul, olhando para o 404 -->
+        <svg class="gill" viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Corpo ovoide branco/azul claro -->
+          <ellipse cx="50" cy="52" rx="32" ry="38" fill="#b8d4e8"/>
+          <ellipse cx="50" cy="48" rx="28" ry="34" fill="#e8f2f8"/>
+          <ellipse cx="48" cy="44" rx="26" ry="30" fill="#fff"/>
+          <!-- Contorno/detalhe lateral -->
+          <path d="M22 45 Q50 38 78 45" stroke="#a0c0d8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Olho único vermelho do Gill - olhando para a direita (para o 404) -->
+          <ellipse class="gill-eye" cx="52" cy="38" rx="14" ry="16" fill="#fff"/>
+          <ellipse cx="52" cy="38" rx="10" ry="12" fill="#c62828"/>
+          <ellipse cx="58" cy="37" rx="4" ry="5" fill="#0a0a0f"/>
+          <ellipse cx="56" cy="35" rx="1.5" ry="1.5" fill="#fff"/>
+          <!-- Braços finos -->
+          <path d="M22 48 L12 72 L8 78" stroke="#e8f2f8" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M78 48 L88 72 L92 78" stroke="#e8f2f8" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <!-- Mãos (garras) -->
+          <ellipse cx="8" cy="78" rx="5" ry="4" fill="#37474f"/>
+          <ellipse cx="92" cy="78" rx="5" ry="4" fill="#37474f"/>
+          <!-- Pernas -->
+          <path d="M38 82 L35 105" stroke="#e8f2f8" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M62 82 L65 105" stroke="#e8f2f8" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <!-- Pés -->
+          <ellipse cx="32" cy="112" rx="8" ry="5" fill="#37474f"/>
+          <ellipse cx="68" cy="112" rx="8" ry="5" fill="#37474f"/>
+        </svg>
+      </div>
+      <p class="code">404</p>
+    </div>
+    <h1 class="title">Página não encontrada</h1>
+    <p class="message">
+      Esta página pode estar em manutenção ou o link que você acessou não existe.
+      Que tal voltar ao início?
+    </p>
+    <div class="divider"></div>
+    <a href="./" class="btn">Voltar ao portfólio</a>
+  </div>
+</body>
+</html>
