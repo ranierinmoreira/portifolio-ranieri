@@ -14,7 +14,7 @@ export default function About() {
               <p key={i}>{paragraph}</p>
             ))}
             <a
-              href={profile.resumeUrl}
+              href={profile.resumeUrl.startsWith('http') ? profile.resumeUrl : `${import.meta.env.BASE_URL}${profile.resumeUrl}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--outline"
