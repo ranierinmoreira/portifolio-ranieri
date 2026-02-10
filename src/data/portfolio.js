@@ -1,21 +1,24 @@
 // ============================================
-// Dados do seu portfólio – edite aqui
+// PORTFÓLIO – EDITE TUDO AQUI
+// Este é o único arquivo que você precisa editar
+// para personalizar nome, textos, projetos, etc.
 // ============================================
 
 export const profile = {
   name: 'Ranieri',
   role: 'Desenvolvedor Full Stack',
-  tagline: 'Disponível para projetos e novas oportunidades', // frase curta na apresentação (opcional)
+  tagline: 'Disponível para projetos e novas oportunidades',
   description: 'Crio experiências digitais únicas com foco em código limpo, design moderno e performance. Pronto para transformar ideias em realidade.',
   email: 'seu-email@exemplo.com',
-  resumeUrl: '/curriculo.pdf', // coloque o PDF na pasta public/
+  resumeUrl: 'curriculo.pdf', // arquivo na pasta public/ (ou URL completa com https://)
   social: {
     github: 'https://github.com/ranierinmoreira',
     linkedin: 'https://linkedin.com/in/ranierinmoreira',
-    twitter: '', // opcional, deixe '' para não exibir
+    twitter: '',
   },
 }
 
+// Seção "Sobre mim" – cada item é um parágrafo
 export const about = {
   paragraphs: [
     'Sou um desenvolvedor apaixonado por tecnologia e por criar soluções que fazem a diferença. Com experiência em desenvolvimento web, busco sempre aprender novas ferramentas e metodologias para entregar projetos de qualidade.',
@@ -24,6 +27,7 @@ export const about = {
   ],
 }
 
+// Habilidades – level de 0 a 100
 export const skills = [
   { name: 'JavaScript', level: 85 },
   { name: 'React', level: 80 },
@@ -33,8 +37,10 @@ export const skills = [
   { name: 'TypeScript', level: 70 },
 ]
 
+// Ferramentas que você usa
 export const tools = ['VS Code', 'Figma', 'Linux', 'PostgreSQL', 'MongoDB', 'Docker']
 
+// Projetos – title, description, tags[], link, image (null ou URL)
 export const projects = [
   {
     title: 'Portfólio',

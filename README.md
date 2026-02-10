@@ -55,13 +55,13 @@ O comando `deploy` vai:
 
 Seu portfólio estará em: **https://seu-usuario.github.io/portifolio-ranieri/**
 
-## ✏️ Personalizar
+## ✏️ Como editar o portfólio
 
-- **Hero**: Edite `src/components/Hero.jsx` (nome, título, descrição)
-- **Sobre**: Edite `src/components/About.jsx` (bio, link do currículo)
-- **Habilidades**: Edite `src/components/Skills.jsx` (skills, ferramentas)
-- **Projetos**: Edite `src/components/Projects.jsx` (seus projetos)
-- **Contato**: Edite `src/components/Contact.jsx` (email, redes sociais)
+**Tudo é editado em um único arquivo:** `src/data/portfolio.js`
+
+Lá você altera nome, cargo, descrição, e-mail, redes sociais, textos da seção Sobre, habilidades, ferramentas e projetos. Não precisa mexer nos componentes.
+
+Veja o guia completo: **[COMO-EDITAR.md](COMO-EDITAR.md)**
 
 ## Tecnologias
 
